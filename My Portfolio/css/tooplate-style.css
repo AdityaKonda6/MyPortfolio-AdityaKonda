@@ -80,6 +80,7 @@ b, strong {
   font-weight: bold;
 }
 
+/* Add a pulsating effect to buttons */
 .custom-btn {
   background: #eee;
   color: #5b5b5b;
@@ -90,17 +91,33 @@ b, strong {
   line-height: normal;
   overflow: hidden;
   transition: all 0.4s ease;
+  animation: pulse 2s infinite;
 }
+
 .custom-btn:hover {
   color: #ffc200;
 }
+
 .custom-btn.custom-btn-bg {
   background: #474559;
   color: #ffffff;
 }
+
 .custom-btn.custom-btn-bg:hover {
   background: #ffc200;
   color: #ffffff !important;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .animated {
